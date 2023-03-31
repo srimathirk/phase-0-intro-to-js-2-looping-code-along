@@ -1,15 +1,12 @@
-let messages = [];
+
 
 function writeCards(stringNames,eventNames){
-   
-    for(let i = 0 ; i<stringNames.length; i++){
-        messages.push(`Thank you, ${stringNames[i]}, for the wonderful ${eventNames} gift!`)
-
-    }    
-    return messages;
+    const msg = [];
+  stringNames.forEach((name)=>msg.push(`Thank you, ${name}, for the wonderful ${eventNames} gift!`))
+  return msg
 }
 
-console.log(messages);
+console.log(writeCards(["Guadalupe", "Ollie", "Aki"],'surprise'));
 
 function countDown(count){
    
